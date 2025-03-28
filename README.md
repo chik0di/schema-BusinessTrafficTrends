@@ -18,19 +18,19 @@ The company needs a comprehensive Warranty & Subscription Management System that
 
 The system should support:
 
-Retail and B2B sales with multiple purchasing platforms.
+- Retail and B2B sales with multiple purchasing platforms.
 
-Tax compliance with stored tax identification numbers.
+- Tax compliance with stored tax identification numbers.
 
-Integration with Stripe for subscription payments.
+- Integration with Stripe for subscription payments.
 
 Key Features Mapped to Database Tables
+
 1. Industry and Product Management
-GlobalTech operates in multiple industries and sub-industries and categorizes its products accordingly.
+   GlobalTech operates in multiple industries and sub-industries and categorizes its products accordingly.
+- industry and sub_industry: Defines the industry type (e.g., Electronics, Healthcare).
 
-industry and sub_industry: Defines the industry type (e.g., Electronics, Healthcare).
-
-product_segment and product_subsegment: Classifies products into segments (e.g., Smartphones, Smart Home Devices).
+- product_segment and product_subsegment: Classifies products into segments (e.g., Smartphones, Smart Home Devices).
 
 2. Company and Brand Management
 company_name: Stores the official names of GlobalTech’s subsidiaries.
