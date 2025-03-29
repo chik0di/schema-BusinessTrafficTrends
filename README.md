@@ -1,7 +1,7 @@
 ## Business Scenario: GlobalTech Warranty & Subscription Management
 
 ### Overview
-
+ 
 GlobalTech is a multinational technology company that manufactures and sells high-end electronics, including smartphones, laptops, and smart home devices. They operate in multiple industries and market segments, offering warranties for their products and subscription services for premium support and extended coverage.
 
 The company needs a comprehensive Warranty & Subscription Management System that allows them to:
