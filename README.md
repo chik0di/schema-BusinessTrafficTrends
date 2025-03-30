@@ -42,6 +42,7 @@ brand: Stores GlobalTech’s different brands (e.g., GlobalTech Mobile, GlobalTe
 website_url: Stores company website details.
 
 3. Warranty Management
+
 Customers who purchase GlobalTech products receive warranties based on specific rules.
 
 warranty_claim: Stores customer claims for defective products.
