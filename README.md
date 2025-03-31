@@ -16,7 +16,7 @@ The company needs a comprehensive Warranty & Subscription Management System that
 
 - Monitor return merchandise authorization (RMA) for defective or returned products.
 
-The system should support:
+#### The system should support:
 
 - Retail and B2B sales with multiple purchasing platforms.
 
@@ -24,7 +24,7 @@ The system should support:
 
 - Integration with Stripe for subscription payments.
 
-Key Features Mapped to Database Tables
+### Key Features Mapped to Database Tables
 
 #### 1. Industry and Product Management
    GlobalTech operates in multiple industries and sub-industries and categorizes its products accordingly.
@@ -65,7 +65,7 @@ Key Features Mapped to Database Tables
 
 - payment_method & stripe_billing_details: Handles Stripe payment processing.
 
-### 5. Return Merchandise Authorization (RMA)
+#### 5. Return Merchandise Authorization (RMA)
 If a customer returns a defective product, it goes through an RMA workflow:
 
     The customer submits a return request.
@@ -77,29 +77,28 @@ If a customer returns a defective product, it goes through an RMA workflow:
 - rma_item: Tracks returned items.
 
 - rma_status: Manages the status of return requests.
+  
 
-Example Scenario
+## Example Scenario: Customer Experience with Warranty & Subscription
 
-Customer Experience with Warranty & Subscription
-
-A customer purchases a GlobalTech Smart Home Hub.
-
-The purchase is linked to the company, product_segment, and warranty_rules.
-
-They subscribe to a premium warranty plan via Stripe.
-
-Their subscription is recorded in the subscription table.
-
-Payment is processed using payment_method.
-
-After 6 months, the device malfunctions, and they file a warranty claim.
-
-The claim is stored in warranty_claim and linked to their product.
-
-If the issue falls under warranty_exclusion, the claim is rejected.
-
-The customer returns the product for a replacement.
-
-The return is processed in rma_item, and its status is updated in rma_status.
+    A customer purchases a GlobalTech Smart Home Hub.
+    
+    The purchase is linked to the company, product_segment, and warranty_rules.
+    
+    They subscribe to a premium warranty plan via Stripe.
+    
+    Their subscription is recorded in the subscription table.
+    
+    Payment is processed using payment_method.
+    
+    After 6 months, the device malfunctions, and they file a warranty claim.
+    
+    The claim is stored in warranty_claim and linked to their product.
+    
+    If the issue falls under warranty_exclusion, the claim is rejected.
+    
+    The customer returns the product for a replacement.
+    
+    The return is processed in rma_item, and its status is updated in rma_status.
 
 This system ensures that warranties, subscriptions, and claims are handled efficiently while integrating Stripe payments and RMA processing.
