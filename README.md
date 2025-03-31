@@ -26,13 +26,13 @@ The system should support:
 
 Key Features Mapped to Database Tables
 
-### 1. Industry and Product Management
+#### 1. Industry and Product Management
    GlobalTech operates in multiple industries and sub-industries and categorizes its products accordingly.
 - industry and sub_industry: Defines the industry type (e.g., Electronics, Healthcare).
 
 - product_segment and product_subsegment: Classifies products into segments (e.g., Smartphones, Smart Home Devices).
 
-### 2. Company and Brand Management
+#### 2. Company and Brand Management
 - company_name: Stores the official names of GlobalTech’s subsidiaries.
 
 - company: Links company names to industries, brands, and billing addresses.
@@ -41,7 +41,7 @@ Key Features Mapped to Database Tables
 
 - website_url: Stores company website details.
 
-### 3. Warranty Management 
+#### 3. Warranty Management 
    Customers who purchase GlobalTech products receive warranties based on specific rules.
 
 - warranty_claim: Stores customer claims for defective products.
@@ -50,16 +50,14 @@ Key Features Mapped to Database Tables
 
 - warranty_exclusion: Lists exclusions (e.g., water damage, accidental damage).
 
-### 4. Subscription Services
+#### 4. Subscription Services
    GlobalTech offers premium support subscriptions that provide:
 
-- Extended warranties.
-
-- Faster claim processing.
-
-- Additional services (e.g., on-site repairs).
-
-#### Tables:
+    Extended warranties.
+    
+    Faster claim processing.
+    
+    Additional services (e.g., on-site repairs).
 
 - subscription: Stores subscription details like duration, amount, and trial period.
 
@@ -76,14 +74,14 @@ If a customer returns a defective product, it goes through an RMA workflow:
     
     The item is either replaced or repaired.
 
-#### Tables:
-
 - rma_item: Tracks returned items.
 
 - rma_status: Manages the status of return requests.
 
 Example Scenario
+
 Customer Experience with Warranty & Subscription
+
 A customer purchases a GlobalTech Smart Home Hub.
 
 The purchase is linked to the company, product_segment, and warranty_rules.
