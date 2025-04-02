@@ -6,14 +6,14 @@ BEGIN;
 CREATE TABLE IF NOT EXISTS public.industry
 (
     industry_id bigserial NOT NULL,
-    industry_name character varying(144)[] NOT NULL,
+    industry_name character varying(144) NOT NULL,
     PRIMARY KEY (industry_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.sub_industry
 (
     sub_industry_id bigserial NOT NULL,
-    sub_industry_name character varying(144)[] NOT NULL,
+    sub_industry_name character varying(144) NOT NULL,
     industry_id bigint NOT NULL,
     PRIMARY KEY (sub_industry_id)
 );
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS public.website_url
 CREATE TABLE IF NOT EXISTS public.brand
 (
     brand_id bigserial NOT NULL,
-    brand_name character varying(144)[] NOT NULL,
+    brand_name character varying(144) NOT NULL,
     brand_logo bytea,
     PRIMARY KEY (brand_id)
 );
@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS public.company
     product_segment_id bigint NOT NULL,
     brand_id bigint NOT NULL,
     primary_billing_address_id bigint NOT NULL,
-    primary_shipping_address_id bigint,
+    primary_shipping_address_id bigint NOT NULL,
     currency character varying(19) NOT NULL,
     is_active boolean NOT NULL,
     PRIMARY KEY (company_id)
@@ -420,7 +420,7 @@ CREATE TABLE IF NOT EXISTS public.all_warranty_cover
     warranty_cover_id bigint,
     model_id bigint,
     manufacturer_id bigint,
-    PRIMARY KEY (None, all_warranty_cover_id)
+    PRIMARY KEY (all_warranty_cover_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.warranty_exclusion
