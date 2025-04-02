@@ -27,6 +27,7 @@ The company needs a comprehensive Warranty & Subscription Management System that
 ### Key Features Mapped to Database Tables
 
 #### 1. Industry and Product Management
+
    GlobalTech operates in multiple industries and sub-industries and categorizes its products accordingly.
 - industry and sub_industry: Defines the industry type (e.g., Electronics, Healthcare).
 
