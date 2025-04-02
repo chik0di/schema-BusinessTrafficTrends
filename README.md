@@ -29,6 +29,7 @@ The company needs a comprehensive Warranty & Subscription Management System that
 #### 1. Industry and Product Management
 
    GlobalTech operates in multiple industries and sub-industries and categorizes its products accordingly.
+   
 - industry and sub_industry: Defines the industry type (e.g., Electronics, Healthcare).
 
 - product_segment and product_subsegment: Classifies products into segments (e.g., Smartphones, Smart Home Devices).
