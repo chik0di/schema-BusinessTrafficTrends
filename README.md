@@ -80,7 +80,7 @@ If a customer returns a defective product, it goes through an RMA workflow:
 - rma_status: Manages the status of return requests.
   
 
-## Example Scenario: Customer Experience with Warranty & Subscription
+### Example Scenario: Customer Experience with Warranty & Subscription
 
     A customer purchases a GlobalTech Smart Home Hub.
     
