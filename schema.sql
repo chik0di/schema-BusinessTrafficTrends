@@ -33,20 +33,6 @@ CREATE TABLE IF NOT EXISTS public.product_subsegment
     PRIMARY KEY (product_subsegment_id)
 );
 
-CREATE TABLE IF NOT EXISTS public.company_name
-(
-    company_name_id bigserial NOT NULL,
-    name character varying(144)[] NOT NULL,
-    PRIMARY KEY (company_name_id)
-);
-
-CREATE TABLE IF NOT EXISTS public.website_url
-(
-    website_url_id bigserial NOT NULL,
-    url text NOT NULL,
-    PRIMARY KEY (website_url_id)
-);
-
 CREATE TABLE IF NOT EXISTS public.brand
 (
     brand_id bigserial NOT NULL,
@@ -135,8 +121,8 @@ CREATE TABLE IF NOT EXISTS public.holiday_schedule_list
 CREATE TABLE IF NOT EXISTS public.company
 (
     company_id bigserial NOT NULL,
-    company_name_id bigint NOT NULL,
-    website_url_id bigint NOT NULL,
+    company_name text NOT NULL,
+    website_url text NOT NULL,
     industry_id bigint NOT NULL,
     sub_industry_id bigint NOT NULL,
     product_segment_id bigint NOT NULL,
@@ -598,22 +584,6 @@ ALTER TABLE IF EXISTS public.company
 ALTER TABLE IF EXISTS public.company
     ADD CONSTRAINT "FK_company_product_segment_id" FOREIGN KEY (product_segment_id)
     REFERENCES public.product_segment (product_segment_id) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS public.company
-    ADD CONSTRAINT "FK_company_website_url" FOREIGN KEY (website_url_id)
-    REFERENCES public.website_url (website_url_id) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS public.company
-    ADD CONSTRAINT "FK_company_name_id" FOREIGN KEY (company_name_id)
-    REFERENCES public.company_name (company_name_id) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
