@@ -24,7 +24,7 @@ The company needs a comprehensive Warranty & Subscription Management System that
 
 - Integration with Stripe for subscription payments.
 
-### Key Features Mapped to Database Tables
+### Key Features Mapped to Database Tables 
 
 #### 1. Industry and Product Management
 
