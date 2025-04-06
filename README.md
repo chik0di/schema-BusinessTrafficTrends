@@ -82,7 +82,7 @@ If a customer returns a defective product, it goes through an RMA workflow:
   
 
 ### Example Scenario: Customer Experience with Warranty & Subscription
-
+ 
     A customer purchases a GlobalTech Smart Home Hub.
     
     The purchase is linked to the company, product_segment, and warranty_rules.
