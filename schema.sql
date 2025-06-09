@@ -1,5 +1,6 @@
 BEGIN;
 
+
 CREATE TABLE IF NOT EXISTS public.industry
 (
     industry_id bigserial NOT NULL,
@@ -18,14 +19,14 @@ CREATE TABLE IF NOT EXISTS public.sub_industry
 CREATE TABLE IF NOT EXISTS public.product_segment
 (
     product_segment_id bigserial NOT NULL,
-    product_segment_name character varying(144)[] NOT NULL,
+    product_segment_name character varying(99) NOT NULL,
     PRIMARY KEY (product_segment_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.product_subsegment
 (
     product_subsegment_id bigserial NOT NULL,
-    product_subsegment_name character varying(144)[] NOT NULL,
+    product_subsegment_name character varying(99) NOT NULL,
     product_segment_id bigint NOT NULL,
     PRIMARY KEY (product_subsegment_id)
 );
@@ -54,23 +55,23 @@ CREATE TABLE IF NOT EXISTS public.brand
 
 CREATE TABLE IF NOT EXISTS public.country
 (
-    country_code character varying(3)[] NOT NULL,
-    country_name character varying(99)[] NOT NULL,
+    country_code character varying(3) NOT NULL,
+    country_name character varying(99) NOT NULL,
     PRIMARY KEY (country_code)
 );
 
 CREATE TABLE IF NOT EXISTS public.city
 (
     city_id bigserial NOT NULL,
-    city_name character varying(144)[] NOT NULL,
-    country_code character varying(3)[] NOT NULL,
+    city_name character varying(144) NOT NULL,
+    country_code character varying(3) NOT NULL,
     PRIMARY KEY (city_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.province
 (
     province_id bigserial NOT NULL,
-    province_name character varying(144)[] NOT NULL,
+    province_name character varying(144) NOT NULL,
     PRIMARY KEY (province_id)
 );
 
@@ -81,8 +82,8 @@ CREATE TABLE IF NOT EXISTS public.billing_address
     address_2 text NOT NULL,
     province_id bigint NOT NULL,
     city_id bigint NOT NULL,
-    country_code character varying(3)[] NOT NULL,
-    postal_code character varying(21)[] NOT NULL,
+    country_code character varying(3) NOT NULL,
+    postal_code character varying(21) NOT NULL,
     PRIMARY KEY (billing_address_id)
 );
 
@@ -109,7 +110,7 @@ CREATE TABLE IF NOT EXISTS public.holiday_date
     holiday_name_id bigint NOT NULL,
     holiday_start_date date NOT NULL,
     holiday_end_date date NOT NULL,
-    PRIMARY KEY (holiday_name_id)
+    PRIMARY KEY (holiday_date_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.holiday_type
@@ -126,7 +127,7 @@ CREATE TABLE IF NOT EXISTS public.holiday_schedule_list
     holiday_date_id bigint NOT NULL,
     holiday_type_id bigint NOT NULL,
     overrides_opening_hours boolean NOT NULL,
-    PRIMARY KEY (holiday_name_id)
+    PRIMARY KEY (holiday_schedule_list_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.company
@@ -160,7 +161,7 @@ CREATE TABLE IF NOT EXISTS public.subscription
     offer_start_date date,
     offer_end_date date,
     valid_to date,
-    amount money,
+    amount numeric(12, 2),
     collection_method text,
     currency text,
     cancel_at timestamp without time zone,
@@ -195,7 +196,7 @@ CREATE TABLE IF NOT EXISTS public.subscription_invoice_list
 (
     subscription_invoice_id bigserial NOT NULL,
     invoice_issue_date date,
-    amount money,
+    amount numeric(12, 2),
     payment_status text,
     invoice_url text,
     PRIMARY KEY (subscription_invoice_id)
@@ -205,7 +206,7 @@ CREATE TABLE IF NOT EXISTS public.payment_method
 (
     payment_method_id bigserial NOT NULL,
     payment_method_type text,
-    "created_at?" timestamp with time zone,
+    created_at timestamp with time zone,
     customer text,
     livemode boolean,
     metadata text,
@@ -325,11 +326,6 @@ CREATE TABLE IF NOT EXISTS public.warranty_rules
     model_id bigint,
     warranty_rules text
 );
-
-CREATE TABLE IF NOT EXISTS public.subsystem_covered_by_warranty
-(
-)
-;
 
 CREATE TABLE IF NOT EXISTS public.model_covered_by_warranty
 (
@@ -466,7 +462,7 @@ CREATE TABLE IF NOT EXISTS public.product
     product_id bigserial NOT NULL,
     model_id bigint NOT NULL,
     unit_cost numeric NOT NULL,
-    "packed_weight(kg)" integer,
+    packed_weight_kg integer,
     imei_number text,
     vin_number text,
     image bytea,
