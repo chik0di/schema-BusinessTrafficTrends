@@ -1,6 +1,4 @@
-## Business Scenario: GlobalTech Warranty & Subscription Management
- 
-### Overview
+<h1 align="center">GlobalTech Database Schema Design for Business Operations & Financial Management</h1>
   
 GlobalTech is a multinational technology company that manufactures and sells high-end electronics, including smartphones, laptops, and smart home devices. They operate in multiple industries and market segments, offering warranties for their products and subscription services for premium support and extended coverage.
 
@@ -24,7 +22,7 @@ The company needs a comprehensive Warranty & Subscription Management System that
 
 - Integration with Stripe for subscription payments.
 
-### Key Features Mapped to Database Tables 
+<h2 align="center">Key Features Mapped to Database Tables</h2>
 
 #### 1. Industry and Product Management
 
@@ -100,6 +98,13 @@ If a customer returns a defective product, it goes through an RMA workflow:
     If the issue falls under warranty_exclusion, the claim is rejected.
     
     The customer returns the product for a replacement.
+
+<h2 align="center">Tools & Technologies</h2>
+<p align="center">
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="100" alt="PostgreSQL" />
+  &nbsp;&nbsp;&nbsp;
+</p>
+
     
     The return is processed in rma_item, and its status is updated in rma_status.
 
