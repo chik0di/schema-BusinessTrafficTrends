@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS public.billing_address
 CREATE TABLE IF NOT EXISTS public.opening_hours
 (
     opening_hours_id bigserial NOT NULL,
-    day character varying(11)[] NOT NULL,
+    day character varying(11) NOT NULL,
     open time without time zone NOT NULL,
     close time without time zone NOT NULL,
     PRIMARY KEY (opening_hours_id)
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS public.opening_hours
 CREATE TABLE IF NOT EXISTS public.holiday_name
 (
     holiday_name_id bigserial NOT NULL,
-    name character varying(99)[] NOT NULL,
+    name character varying(99) NOT NULL,
     holiday_type_id bigint,
     PRIMARY KEY (holiday_name_id)
 );
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS public.holiday_date
 CREATE TABLE IF NOT EXISTS public.holiday_type
 (
     holiday_type_id bigserial NOT NULL,
-    holiday_type_name character varying(99)[] NOT NULL,
+    holiday_type_name character varying(99) NOT NULL,
     PRIMARY KEY (holiday_type_id)
 );
 
