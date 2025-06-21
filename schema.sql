@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS public.product_subsegment
 CREATE TABLE IF NOT EXISTS public.company_name
 (
     company_name_id bigserial NOT NULL,
-    name character varying(144)[] NOT NULL,
+    name character varying(144) NOT NULL,
     PRIMARY KEY (company_name_id)
 );
 
