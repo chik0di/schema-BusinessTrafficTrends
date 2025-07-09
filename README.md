@@ -98,14 +98,13 @@ If a customer returns a defective product, it goes through an RMA workflow:
     If the issue falls under warranty_exclusion, the claim is rejected.
     
     The customer returns the product for a replacement.
+    
+    The return is processed in rma_item, and its status is updated in rma_status.
+
+This system ensures that warranties, subscriptions, and claims are handled efficiently while integrating Stripe payments and RMA processing.
 
 <h2 align="center">Tools & Technologies</h2>
 <p align="center">
    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="100" alt="PostgreSQL" />
   &nbsp;&nbsp;&nbsp;
 </p>
-
-    
-    The return is processed in rma_item, and its status is updated in rma_status.
-
-This system ensures that warranties, subscriptions, and claims are handled efficiently while integrating Stripe payments and RMA processing.
