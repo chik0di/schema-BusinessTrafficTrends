@@ -13,7 +13,7 @@ The company needs a comprehensive Warranty & Subscription Management System that
 - Process subscriptions and invoices (Subscription, Subscription Invoice, Payment Methods).
 
 - Monitor return merchandise authorization (RMA) for defective or returned products.
-
+ 
 #### The system should support: 
 
 - Retail and B2B sales with multiple purchasing platforms.
