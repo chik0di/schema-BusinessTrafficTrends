@@ -9,7 +9,7 @@ The company needs a comprehensive Warranty & Subscription Management System that
 - Track company details (Company, Billing Address, Brand, Website).
 
 - Handle warranties and claims (Warranty Claim, Warranty Coverage, Exclusions).
-
+ 
 - Process subscriptions and invoices (Subscription, Subscription Invoice, Payment Methods).
 
 - Monitor return merchandise authorization (RMA) for defective or returned products.
