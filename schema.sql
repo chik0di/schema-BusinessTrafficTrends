@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS public.pay_to_information
 (
     pay_to_information_id bigserial NOT NULL,
     company_id bigint,
-    company_billing_address_id bigint,
+    company_billing_address_id bigint, 
     company_billing_information_id bigint,
     company_website_url_id bigint,
     PRIMARY KEY (pay_to_information_id)
