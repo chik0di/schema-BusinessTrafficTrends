@@ -1,7 +1,7 @@
 <h1 align="center">GlobalTech Database Schema Design for Business Operations & Financial Management</h1>
   
 GlobalTech is a multinational technology company that manufactures and sells high-end electronics, including smartphones, laptops, and smart home devices. They operate in multiple industries and market segments, offering warranties for their products and subscription services for premium support and extended coverage.
-
+ 
 The company needs a comprehensive Warranty & Subscription Management System that allows them to:  
 
 - Manage industries and product categories (Industry, Sub-Industry, Product Segment, etc.).
