@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS public.product_subsegment
     PRIMARY KEY (product_subsegment_id)
 );
 
-CREATE TABLE IF NOT EXISTS public.brand
+CREATE TABLE IF NOT EXISTS public.brand 
 (
     brand_id bigserial NOT NULL,
     brand_name character varying(144) NOT NULL,
